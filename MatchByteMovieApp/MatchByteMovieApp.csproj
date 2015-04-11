@@ -1107,7 +1107,7 @@
           <IISAppRootUrl>https://localhost:44300/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>True</UseCustomServer>
-          <CustomServerUrl>https://aspnetmvc5.apphb.com/</CustomServerUrl>
+          <CustomServerUrl>http://aspnetmvc5.apphb.com/</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
