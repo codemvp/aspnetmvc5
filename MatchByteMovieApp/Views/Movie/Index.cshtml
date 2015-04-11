@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html ng-app="movieApp">
+<head lang="en">
+    <meta charset="utf-8">
+    <title>CRUD App using AngularJS</title>
+    <link href="~/Content/ng-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/ng-grid.min.js"></script>
+    <script src="~/Scripts/MyScripts/common.js"></script>
+
+    <script>
+        function IsAdmin() {
+            return '@User.IsInRole("Manager")' == 'True' ? "true" : "false";
+        }
+    </script>
+</head>
+
+<body ng-controller="movieController">
+    <form name="myForm">
+        <b> {{action | uppercase}} </b>
+        <br />
+        <span><b>Movie Details</b></span>
+        <table>
+            <tr>
+                <td>Title</td>
+                <td> <input type="text" ng-model="New.Title" class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>Year Released</td>
+                <td>
+                    @*<input type="date" class="form-control" ng-model="New.YearReleased" placeholder="dd/MM/yyyy" ng-init="New.YearReleased=new Date()" required />*@
+                    <input type="text" ng-model="New.YearReleased" class="form-control" data-date-format="dd/MM/yyyy" datepicker ng-disabled="disableFields" ng-init="New.YearReleased=new Date();" />
+                </td>
+            </tr>
+            <tr>
+                <td>Rating</td>
+                <td>
+                    @*<input type="text" ng-model="New.Rating" class="form-control" />*@
+                    <select ng-model="New.Rating" ng-options="key as val for (key, val) in ratings"></select>
+                </td>
+            </tr>
+        </table>
+        <input id="Submit1" ng-click="update()" type="submit" value="submit" />
+    </form>
+    <br />
+    <div class="gridStyle" ng-grid="gridOptions"></div>
+</body>
+</html>
