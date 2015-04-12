@@ -10,8 +10,8 @@ namespace MatchByteMovieApp.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-            //return RedirectToAction("Index", "Movie", null);
+            //return View();
+            return RedirectToAction("Index", "Movie", null);
         }
 
         public ActionResult About()
