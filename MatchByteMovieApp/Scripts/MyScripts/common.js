@@ -58,7 +58,7 @@ movieApp.factory('movieRepository', function ($http) {
 //controller   
 movieApp.controller('movieController', function ($scope, movieRepository) {
     console.log($scope);
-    getMovies();
+    //getMovies();
 
     function getMovies() {
         movieRepository.getMovies(function (results) {
