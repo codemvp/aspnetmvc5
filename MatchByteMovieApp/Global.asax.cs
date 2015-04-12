@@ -22,12 +22,12 @@ namespace MatchByteMovieApp
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        protected void Application_BeginRequest(Object sender, EventArgs e)
-        {
-            //var context = new MovieDbContext();
-            //var dbInitializer = new DbInitializer<MovieDbContext>();
-            //Database.SetInitializer<MovieDbContext>(dbInitializer);
-            //dbInitializer.InitializeDatabase(context);
-        }
+        //protected void Application_BeginRequest(Object sender, EventArgs e)
+        //{
+        //    var context = new MovieDbContext();
+        //    var dbInitializer = new DbInitializer<MovieDbContext>();
+        //    Database.SetInitializer<MovieDbContext>(dbInitializer);
+        //    dbInitializer.InitializeDatabase(context);
+        //}
     }
 }

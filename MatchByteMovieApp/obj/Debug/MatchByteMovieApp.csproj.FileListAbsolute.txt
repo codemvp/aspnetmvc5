@@ -181,5 +181,6 @@ C:\Users\marvinp\Source\Repos\aspnetmvc5\MatchByteMovieApp\bin\Microsoft.Owin.Se
 C:\Users\marvinp\Source\Repos\aspnetmvc5\MatchByteMovieApp\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\marvinp\Source\Repos\aspnetmvc5\MatchByteMovieApp\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\marvinp\Source\Repos\aspnetmvc5\MatchByteMovieApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\marvinp\Source\Repos\aspnetmvc5\MatchByteMovieApp\obj\Debug\MatchByteMovieApp.csprojResolveAssemblyReference.cache
 C:\Users\marvinp\Source\Repos\aspnetmvc5\MatchByteMovieApp\obj\Debug\MatchByteMovieApp.dll
 C:\Users\marvinp\Source\Repos\aspnetmvc5\MatchByteMovieApp\obj\Debug\MatchByteMovieApp.pdb
