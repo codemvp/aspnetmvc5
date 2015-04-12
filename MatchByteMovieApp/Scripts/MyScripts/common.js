@@ -1,21 +1,21 @@
-﻿//'use strict';
+﻿'use strict';
 
 //following is our application module.ngGrid is the angular grid that we need to use to display data.
 var movieApp = angular.module('movieApp', ['ngGrid'])
-//movieApp.directive('datepicker', function () {
-//    return {
-//        restrict: 'A',
-//        require: 'ngModel',
-//        link: function (scope, element, attrs, ngModelCtrl) {
-//            element.datepicker();
-//            element.bind('blur keyup change', function () {
-//                var model = attrs.ngModel;
-//                if (model.indexOf(".") > -1) scope[model.replace(/\.[^.]*/, "")][model.replace(/[^.]*\./, "")] = element.val();
-//                else scope[model] = element.val();
-//            });
-//        }
-//    };
-//});
+movieApp.directive('datepicker', function () {
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+        link: function (scope, element, attrs, ngModelCtrl) {
+            element.datepicker();
+            element.bind('blur keyup change', function () {
+                var model = attrs.ngModel;
+                if (model.indexOf(".") > -1) scope[model.replace(/\.[^.]*/, "")][model.replace(/[^.]*\./, "")] = element.val();
+                else scope[model] = element.val();
+            });
+        }
+    };
+});
 
 var url = 'api/MovieApi';
 
@@ -57,7 +57,7 @@ movieApp.factory('movieRepository', function ($http) {
 
 //controller   
 movieApp.controller('movieController', function ($scope, movieRepository) {
-
+    console.log($scope);
     getMovies();
 
     function getMovies() {
